@@ -9,6 +9,7 @@ import {
 import Root from './Root';
 import Home from './Home';
 import AddBread from './AddBread'
+import Read from './Read';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,11 @@ const router = createBrowserRouter([
       {
         path: "/addBreads",
         element:  <AddBread></AddBread> ,
+      },
+      {
+        path: "/read",
+        element:  <Read></Read> ,
+   
       },
     ],
   },

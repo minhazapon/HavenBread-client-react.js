@@ -1,20 +1,5 @@
 
 
-// https://img.freepik.com/premium-photo/basket-filled-with-assorted-bakery-products_1236033-67772.jpg?w=740 //
-
-// https://img.freepik.com/premium-photo/rustic-bread-basket-filled-with-specialty-breads-like-pain-au-levain-seeded-loaves_1314467-83431.jpg?w=740 //
-
-// https://img.freepik.com/premium-photo/croissants-placed-basket_1151123-30063.jpg?w=740 //
-
-//  https://img.freepik.com/premium-photo/basket-breads-with-bunch-buns-it_1077535-9043.jpg?w=740 //
-
-// https://img.freepik.com/premium-photo/basket-breads-croissants-rolls-closeup_1142932-2679.jpg?w=740// 
-
-// https://img.freepik.com/premium-photo/basket-breads-with-bunch-buns-it_1077535-9021.jpg?w=740//
-
-
-import Swal from 'sweetalert2'
-
 
 
 const AddBread = () => {
@@ -44,14 +29,9 @@ const AddBread = () => {
       .then(res => res.json())
       .then(data => {
         console.log(data)
-        if(data.inserted){
-            Swal.fire({
-                title: 'DATA GET SUCCESSFULLY',
-                text: 'Do you want to continue',
-                icon: 'success',
-                confirmButtonText: 'Cool'
-              })
-            form.reset();
+        if(data.insertedId){
+          alert('data get successfully')
+          form.reset();
         }
       })
 
@@ -85,10 +65,9 @@ const AddBread = () => {
                     <input placeholder=" Taste " type="text" name="Taste" className=" p-2  h-[50px] w-[300px] rounded-xl border-[#1cf6fd] border-[1px] " />
                     <input placeholder=" Category " type="text" name="Category" className=" p-2  h-[50px] w-[300px] rounded-xl border-[#1cf6fd] border-[1px] " />
                     <input placeholder=" Details " type="text" name="Details" className=" p-2  h-[50px] w-[300px] rounded-xl border-[#1cf6fd] border-[1px] " />
-                    <input placeholder="PhotoUrl" className=" p-2  h-[50px] w-[300px] rounded-xl border-[#1cf6fd] border-[1px] "  type="url" name="PhotoUrl" id="" />
-                    <div className=" flex justify-center"> 
-                    <input className=" btn border-[1px] border-[#1cf6fd] bg-white w-full" type="submit" value="Add" />
-                    </div>
+                    <input placeholder="PhotoUrl" className=" p-2  h-[50px] w-[300px] rounded-xl border-[#1cf6fd] border-[1px] "  type="url" name="PhotoUrl" id="" />                  
+                    <button className=" btn border-[1px] border-[#1cf6fd] bg-white w-full">Add</button>
+
                   
                 </form>
 

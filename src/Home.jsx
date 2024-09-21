@@ -1,5 +1,6 @@
 
 import AddButton from "./AddButton";
+import Read from "./Read";
 
 
 
@@ -8,6 +9,7 @@ const Home = () => {
         <div>
 
             <AddButton></AddButton>
+            <Read></Read>
            
             
         </div>
