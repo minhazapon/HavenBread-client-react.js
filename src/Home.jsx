@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div>
 
-            <AddButton></AddButton>
+   
             <Read></Read>
            
             

@@ -8,7 +8,7 @@ const Nav = () => {
     const navs = <>
         
         <li className=" font-mono "><NavLink to="/" >Home</NavLink></li>
-        <li className=" font-mono "><NavLink to="/Bread" >Bread</NavLink></li>
+        <li className=" font-mono "><NavLink to="/addBreads" >Bread</NavLink></li>
         <li className=" font-mono "><NavLink to="/Contact" >Contact</NavLink></li>
     
     

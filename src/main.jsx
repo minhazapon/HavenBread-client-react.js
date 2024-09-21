@@ -10,6 +10,7 @@ import Root from './Root';
 import Home from './Home';
 import AddBread from './AddBread'
 import Read from './Read';
+import Update from './Update';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,12 @@ const router = createBrowserRouter([
       {
         path: "/read",
         element:  <Read></Read> ,
+   
+      },
+      {
+        path: "/upBreads/:id",
+        element: <Update></Update> ,
+        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
    
       },
     ],
