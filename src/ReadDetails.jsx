@@ -43,8 +43,8 @@ const ReadDetails = ({users, breads, setBreads}) => {
                         icon: "success"
                       });
                 
-                // const removing =  breads.filter( breads => breads._id !==_id )
-                // setBreads(removing) 
+                const removing =  breads.filter( breads => breads._id !==_id )
+                setBreads(removing) 
 
 
                 }
@@ -80,7 +80,7 @@ const ReadDetails = ({users, breads, setBreads}) => {
             <img className="  btn h-[30px]" src="https://cdn-icons-png.flaticon.com/128/17766/17766508.png" alt="" />
             </Link>
             <br></br>
-            <button onClick={()=> handleDelete() }  className=" "><img className=" btn mt-1 h-[30px]" src="https://cdn-icons-png.flaticon.com/128/14929/14929600.png" alt="" /></button>
+            <button onClick={()=> handleDelete(users._id) }  className=" "><img className=" btn mt-1 h-[30px]" src="https://cdn-icons-png.flaticon.com/128/14929/14929600.png" alt="" /></button>
             <br></br>
         </div>
         </div>
