@@ -11,6 +11,7 @@ import Home from './Home';
 import AddBread from './AddBread'
 import Read from './Read';
 import Update from './Update';
+import AuthContext from './firebase file/AuthContext';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,12 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-   <RouterProvider router={router} />
+
+    <AuthContext>
+         
+    <RouterProvider router={router} />
+
+    </AuthContext>
+  
   </StrictMode>,
 )
