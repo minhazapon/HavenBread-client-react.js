@@ -12,6 +12,9 @@ import AddBread from './AddBread'
 import Read from './Read';
 import Update from './Update';
 import AuthContext from './firebase file/AuthContext';
+import Login from './firebase file/Login';
+import SignUp from './firebase file/SignUp';
+import PrivateRoute from './firebase file/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -20,15 +23,25 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element:  <PrivateRoute><Home></Home></PrivateRoute>,
       },
       {
         path: "/addBreads",
-        element:  <AddBread></AddBread> ,
+        element: <PrivateRoute><AddBread></AddBread></PrivateRoute>   ,
       },
       {
         path: "/read",
         element:  <Read></Read> ,
+   
+      },
+      {
+        path: "/login",
+        element:  <Login></Login> ,
+   
+      },
+      {
+        path: "/up",
+        element: <SignUp></SignUp>  ,
    
       },
       {
