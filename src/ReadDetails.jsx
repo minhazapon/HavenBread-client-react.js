@@ -27,7 +27,7 @@ const ReadDetails = ({users, breads, setBreads}) => {
             if (result.isConfirmed) {
            
 
-            fetch(`http://localhost:5000/users/${delete_id}`, {
+            fetch(`https://haven-server-bvwo7e7l0-minhazapons-projects.vercel.app/users/${delete_id}`, {
             
                 method: 'DELETE'
                  

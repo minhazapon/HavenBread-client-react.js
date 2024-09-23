@@ -21,7 +21,7 @@ const AddBread = () => {
       const PhotoUrl = form.PhotoUrl.value 
       const users = {name, Chef, Supplier, Taste, Category, Details, PhotoUrl}
       console.log(users)
-      fetch('http://localhost:5000/users', {
+      fetch('https://haven-server-bvwo7e7l0-minhazapons-projects.vercel.app/users', {
         method: 'POST',
         headers:{
             'content-type': 'application/json'

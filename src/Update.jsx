@@ -24,7 +24,7 @@ const Update = () => {
         const PhotoUrl = form.PhotoUrl.value 
         const UpUsers = {name, Chef, Supplier, Taste, Category, Details, PhotoUrl}
         console.log(UpUsers)
-        fetch(`http://localhost:5000/users/${_id}`, {
+        fetch(`https://haven-server-bvwo7e7l0-minhazapons-projects.vercel.app/users/${_id}`, {
           method: 'PUT',
           headers:{
               'content-type': 'application/json'

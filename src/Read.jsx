@@ -16,7 +16,7 @@ const Read = () => {
 
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/users')
+        fetch('https://haven-server-bvwo7e7l0-minhazapons-projects.vercel.app/users')
         .then(res =>res.json())
         .then(data => setUsers(data))
     } , [])

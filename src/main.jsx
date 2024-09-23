@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element:  <PrivateRoute><Home></Home></PrivateRoute>,
+        element:  <Home></Home>,
       },
       {
         path: "/addBreads",
@@ -47,7 +47,7 @@ const router = createBrowserRouter([
       {
         path: "/upBreads/:id",
         element: <Update></Update> ,
-        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
+        loader: ({params}) => fetch(`https://haven-server-bvwo7e7l0-minhazapons-projects.vercel.app/users/${params.id}`)
    
       },
     ],
